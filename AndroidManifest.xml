@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.androidtitlan.smscallbacktest"
+      android:versionCode="1" android:versionName="1.0 Beta">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".SMSCallBack"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Permission to Make automated Responses to SMS -->
+    <service android:enabled="true" android:name=".ResponderService"/>
+    </application>
+    <uses-sdk android:minSdkVersion="4" />
+    <!-- Permissions needed to Receive and Send SMS's -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+	<uses-permission android:name="android.permission.SEND_SMS"/>
+
+</manifest> 
